@@ -1,0 +1,22 @@
+## Applications ##
+alias sql='mysql -uroot -proot'
+
+## Git ##
+alias gitb='git branch'
+alias gits='git status'
+
+## Directories ##
+alias src='cd /home/chris/Source/'
+alias trm='cd /home/chris/Source/terminal'
+alias via='cd /home/chris/Source/www/clients/viaforensics'
+alias www='cd /home/chris/Source/www'
+
+## Shortcuts ##
+alias clip='xclip -selection clipboard'
+alias off='sudo shutdown -P now'
+alias q='exit'
+alias up='sudo apt-get update && sudo apt-get upgrade --assume-yes && sudo apt-get autoclean && sudo apt-get autoremove'
+alias z='cd'
+
+## SSH ##
+alias calcom='ssh chris-allen-lane.com'

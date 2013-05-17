@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/chris'
+let g:netrw_dirhist_2='/home/chris/Desktop'
+let g:netrw_dirhist_3='/usr/share/awesome/themes/default'
+let g:netrw_dirhist_4='/home/chris/.config/awesome'
+let g:netrw_dirhist_5='/home/chris/Source/phonegap/test0001/assets/www/spec'
+let g:netrw_dirhist_6='/home/chris/Source/phonegap/test0001/assets/www/css'
+let g:netrw_dirhist_7='/home/chris/Source/www/clients/viaforensics/sails'

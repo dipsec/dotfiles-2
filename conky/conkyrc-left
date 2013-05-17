@@ -1,0 +1,38 @@
+#background yes
+#no_buffers yes
+alignment top_left
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+double_buffer yes
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+extra_newline no
+gap_x 1475
+gap_y 35
+maximum_width 450
+minimum_size 450
+net_avg_samples 2
+out_to_console no
+out_to_stderr no
+own_window yes
+own_window_transparent yes
+own_window_type override
+show_graph_range no
+show_graph_scale no
+stippled_borders 0
+text_buffer_size 4096
+update_interval 1.0
+uppercase no
+use_spacer none
+use_xft yes
+xftfont Monospace Sans:size=8
+
+TEXT
+MAN ${hr 2}
+${voffset 4}${execi 600 /home/chris/Source/terminal/random-man-command/random-man-command.rb | fmt -s -w 80 }
+

@@ -1,0 +1,87 @@
+#background yes
+#no_buffers yes
+alignment top_right
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+double_buffer yes
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+extra_newline no
+gap_x 35
+gap_y 35
+maximum_width 200
+minimum_size 200 0
+net_avg_samples 2
+out_to_console no
+out_to_stderr no
+own_window yes
+own_window_transparent yes
+own_window_type override
+show_graph_range no
+show_graph_scale no
+stippled_borders 0
+text_buffer_size 512
+update_interval 1.0
+uppercase no
+use_spacer none
+use_xft yes
+xftfont Monospace Sans:size=8
+
+TEXT
+SYSTEM ${hr 2}
+${voffset 4}Kernel: ${alignr}${kernel}
+${voffset 1}Uptime: ${alignr}${uptime}
+${voffset 1}CPU1: ${cpu cpu1}% ${alignr}${cpugraph cpu1 8,60 F57900 FCAF3E}
+${voffset 1}CPU2: ${cpu cpu2}% ${alignr}${cpugraph cpu2 8,60 F57900 FCAF3E}
+${voffset 1}CPU3: ${cpu cpu3}% ${alignr}${cpugraph cpu3 8,60 F57900 FCAF3E}
+${voffset 1}CPU4: ${cpu cpu4}% ${alignr}${cpugraph cpu4 8,60 F57900 FCAF3E}
+${voffset 1}RAM:   $memperc% ${alignr}${memgraph 8,60 F57900 FCAF3E}
+#${voffset 1}SWAP: $swapperc% ${alignr}${swapbar 8,60}
+
+DATE ${hr 2}
+${alignc 47}${font Radio Space:size=32}${time %H:%M}${font}
+${voffset 4}${alignc}${font Arial:style=Bold:pixelsize=10}${time %A %d}
+#${alignc}${execi 60 date +"%B %Y" | tr "[:lower:]" "[:upper:]"}
+
+HD ${hr 2}
+${voffset 4}Root:
+${voffset 1}${fs_free /} / ${fs_size /} ${alignr}${fs_bar 8,60 /}
+${voffset 4}Storage:
+${voffset 1}${fs_free /media/Storage} / ${fs_size /media/Storage} ${alignr}${fs_bar 8,60 /media/Storage}
+
+${if_existing /proc/net/route eth0}
+ETH0 ${hr 2}
+${voffset 4}Up: ${upspeed eth0} kb/s ${alignr}${upspeedgraph eth0 8,60 F57900 FCAF3E}
+${voffset 1}Down: ${downspeed eth0} kb/s ${alignr}${downspeedgraph eth0 8,60 F57900 FCAF3E}
+${voffset 1}Upload: ${alignr}${totalup eth0}
+${voffset 1}Download: ${alignr}${totaldown eth0}
+${voffset 1}Local IP: ${alignr}${addr eth0}
+${voffset 1}Remote IP: ${alignr}${execi 600 curl -s "http://chris-allen-lane.com/etc/remote-ip.php"}
+${endif}
+${if_existing /proc/net/route wlan0}
+WLAN0 ${hr 2}
+${voffset 4}Up: ${upspeed wlan0} kb/s ${alignr}${upspeedgraph wlan0 8,60 F57900 FCAF3E}
+${voffset 1}Down: ${downspeed wlan0} kb/s ${alignr}${downspeedgraph wlan0 8,60 F57900 FCAF3E}
+${voffset 1}Upload: ${alignr}${totalup wlan0}
+${voffset 1}Download: ${alignr}${totaldown wlan0}
+${voffset 1}Local IP: ${alignr}${addr wlan0}
+${voffset 1}Remote IP: ${alignr}${execi 600 curl -s "http://chris-allen-lane.com/etc/remote-ip.php"}
+${endif}
+
+PROCESSES ${hr 2}
+${voffset 4}Process ${alignr}CPU RAM
+${voffset 1}${top name 1} ${alignr}${top_mem cpu 1} ${top_mem mem 1}
+${voffset 1}${top name 2} ${alignr}${top_mem cpu 2} ${top_mem mem 2}
+${voffset 1}${top name 3} ${alignr}${top_mem cpu 3} ${top_mem mem 3}
+${voffset 1}${top name 4} ${alignr}${top_mem cpu 4} ${top_mem mem 4}
+${voffset 1}${top name 5} ${alignr}${top_mem cpu 5} ${top_mem mem 5}
+${voffset 1}${top name 6} ${alignr}${top_mem cpu 6} ${top_mem mem 6}
+${voffset 1}${top name 7} ${alignr}${top_mem cpu 7} ${top_mem mem 7}
+${voffset 1}${top name 8} ${alignr}${top_mem cpu 8} ${top_mem mem 8}
+${voffset 1}${top name 9} ${alignr}${top_mem cpu 9} ${top_mem mem 9}
+${voffset 1}${top name 10} ${alignr}${top_mem cpu 10} ${top_mem mem 10}

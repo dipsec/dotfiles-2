@@ -1,0 +1,112 @@
+call pathogen#infect()
+
+" ----- Color Scheme -----
+set guifont=inconsolata
+:colorscheme molokai
+let g:molokai_original = 1
+
+filetype plugin indent on
+highlight ColorColumn ctermbg=4 " change the highlight to darkblue
+highlight CursorLine ctermbg=0  " change the highlight to darkblue
+scriptencoding utf-8
+syntax on
+
+set t_Co=256
+
+" ----- Command Line -----
+if has('cmdline_info')
+	set ruler                   " show the ruler
+	set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
+	set showcmd                 " show partial commands in status line and selected characters/lines in visual mode  
+endif
+
+" ----- Status Line -----
+if has('statusline')
+	set laststatus=2
+	set statusline=%<%f\
+	set statusline+=%w%h%m%r
+	set statusline+=%{fugitive#statusline()}
+	set statusline+=\ [%{&ff}/%Y]
+	set statusline+=\ [%{getcwd()}]
+	set statusline+=%=%-14.(%l,%c%V%)\ %p%%
+endif
+
+" ----- General -----
+"set showmatch                   " show matching brackets/parenthesis
+"set ai
+"set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
+
+set autochdir
+set autoindent                  " indent at the same level of the previous line
+set backspace=indent,eol,start  " backspace for dummies
+set colorcolumn=80,120          " highlight the 80th column
+set cursorline                  " highlight current line
+set expandtab                   " tabs are spaces, not tabs
+set foldenable                  " auto fold code
+set hidden
+set hlsearch                    " highlight search terms
+set ignorecase                  " case insensitive search
+set incsearch                   " find as you type search
+set linespace=0                 " No extra spaces between rows
+set matchpairs+=<:>             " match, to be used with %
+set mouse=a                     " automatically enable mouse usage
+set nowrap                      " wrap long lines
+set nu                          " Line numbers on
+set scrolljump=5                " lines to scroll when cursor leaves screen
+set scrolloff=3                 " minimum lines to keep above and below cursor
+set shiftwidth=4                " use indents of 4 spaces
+set si
+set smartcase                   " case sensitive when uc present
+set smarttab
+set softtabstop=4               " let backspace delete indent
+set spell                       " spell checking on
+set t_Co=16
+set tabstop=4                   " an indentation every four columns
+set tabstop=4 shiftwidth=4
+set virtualedit=onemore         " allow for cursor beyond last character
+set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to
+set wildmenu                    " show list instead of just completing
+set wildmode=list:longest,full  " command <Tab> completion, list matches, then longest common part, then all.
+set winminheight=0              " windows can be 0 line high
+
+" set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
+" Remove trailing whitespaces and ^M chars autocmd FileTypeder is '\', but many people prefer ',' as it's in a standard location
+let mapleader = ","
+
+" Easier moving in tabs and windows
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
+
+" Escape Insert Mode with jk and kj   
+:imap jk <Esc>
+:imap JK <Esc>
+:imap kj <Esc>
+:imap KJ <Esc>
+
+" Wrapped lines goes down/up to next row, rather than next line in file.
+nnoremap j gj
+nnoremap k gk
+
+" Stupid shift key fixes
+cmap W w
+cmap WQ wq
+cmap wQ wq
+cmap Q q
+cmap Tabe tabe
+
+" visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
+
+" specify custom file types
+au BufNewFile,BufRead *.md.erb set filetype=markdown
+au BufNewFile,BufRead *.less set filetype=css
+
+" plugin-specifc mappings
+nmap <silent> <leader>f :NERDTreeToggle<CR> 
+nmap <silent> <leader>t :TlistToggle<CR> 
+
+" open the tag list browser on the right
+let Tlist_Use_Right_Window = 1
