@@ -1,4 +1,10 @@
-call pathogen#infect()
+all pathogen#infect()
+
+" stuff to improve
+" - :noh and :Noh
+" - :set nospell
+" - powerline 
+" - :w
 
 " ----- Color Scheme -----
 set guifont=inconsolata
@@ -10,8 +16,6 @@ highlight ColorColumn ctermbg=4 " change the highlight to darkblue
 highlight CursorLine ctermbg=0  " change the highlight to darkblue
 scriptencoding utf-8
 syntax on
-
-set t_Co=256
 
 " ----- Command Line -----
 if has('cmdline_info')
@@ -32,10 +36,6 @@ if has('statusline')
 endif
 
 " ----- General -----
-"set showmatch                   " show matching brackets/parenthesis
-"set ai
-"set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
-
 set autochdir
 set autoindent                  " indent at the same level of the previous line
 set backspace=indent,eol,start  " backspace for dummies
@@ -60,9 +60,8 @@ set smartcase                   " case sensitive when uc present
 set smarttab
 set softtabstop=4               " let backspace delete indent
 set spell                       " spell checking on
-set t_Co=16
-set tabstop=4                   " an indentation every four columns
-set tabstop=4 shiftwidth=4
+set t_Co=256
+set tabstop=4 shiftwidth=4      " an indentation every four columns
 set virtualedit=onemore         " allow for cursor beyond last character
 set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to
 set wildmenu                    " show list instead of just completing
