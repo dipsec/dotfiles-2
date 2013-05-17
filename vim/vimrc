@@ -5,6 +5,12 @@ all pathogen#infect()
 " - :set nospell
 " - powerline 
 " - :w
+" - scratch
+" - autocomplete
+" - backspace (Ctrl+w)
+" - vimrc formatting
+" - skybison?
+" - command-t
 
 " ----- Color Scheme -----
 set guifont=inconsolata
