@@ -9,6 +9,7 @@ alias gits='git status'
 alias src='cd /home/chris/Source/'
 alias trm='cd /home/chris/Source/terminal'
 alias via='cd /home/chris/Source/www/clients/viaforensics'
+alias vp='cd /home/chris/Source/www/clients/viaforensics/viaprotect'
 alias www='cd /home/chris/Source/www'
 
 ## Shortcuts ##
