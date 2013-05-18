@@ -1,6 +1,10 @@
 # Adapted with gratitude from:
 # https://raw.github.com/skwp/dotfiles/master/git/gitconfig
 
+[user]
+	name  = Chris Lane
+	email = chris@chris-allen-lane.com
+
 # set your user tokens as enivornment variables, such as ~/.secrets
 # See the README for examples.
 [color]
