@@ -11,8 +11,6 @@ highlight CursorLine ctermbg=0  " change the highlight to darkblue
 scriptencoding utf-8
 syntax on
 
-set t_Co=256
-
 " ----- Command Line -----
 if has('cmdline_info')
 	set ruler                   " show the ruler
@@ -60,7 +58,7 @@ set smartcase                   " case sensitive when uc present
 set smarttab
 set softtabstop=4               " let backspace delete indent
 set spell                       " spell checking on
-set t_Co=16
+set t_Co=256
 set tabstop=4                   " an indentation every four columns
 set tabstop=4 shiftwidth=4
 set virtualedit=onemore         " allow for cursor beyond last character
@@ -88,6 +86,10 @@ map <C-H> <C-W>h
 " Wrapped lines goes down/up to next row, rather than next line in file.
 nnoremap j gj
 nnoremap k gk
+
+" Easier splits
+nnoremap <silent> <leader>v :vsplit<CR> 
+nnoremap <silent> <leader>h :split<CR> 
 
 " Stupid shift key fixes
 cmap W w
