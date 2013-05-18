@@ -26,10 +26,20 @@ task :conky do
     puts 'this is a stub'
 end
 
-desc 'deploys my vim files'
-task :vim do
-    `rm -rf ~/.vim ~/.vimrc`
-    `cp -r vim ~/.vim`
-    `cp vim/vimrc ~/.vimrc`
-    puts 'vim deployed'
+namespace :vim do
+    desc 'deploys my vim files'
+    task :all do
+        `rm -rf ~/.vim ~/.vimrc`
+        `cp -r vim ~/.vim`
+        `cp vim/vimrc ~/.vimrc`
+        puts 'vim deployed'
+    end
+
+    desc 'deploys my .vimrc only'
+    task :vimrc do
+        `rm -rf ~/.vimrc`
+        `cp vim/vimrc ~/.vimrc`
+        puts '.vimrc deployed'
+    end
 end
+
