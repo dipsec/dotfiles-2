@@ -1,10 +1,6 @@
 ## Applications ##
 alias sql='mysql -uroot -proot'
 
-## Git ##
-alias gitb='git branch'
-alias gits='git status'
-
 ## Directories ##
 alias src='cd /home/chris/Source/'
 alias trm='cd /home/chris/Source/terminal'
