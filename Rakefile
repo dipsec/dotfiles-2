@@ -3,7 +3,8 @@ task :all do
     Rake::Task['awesome'].execute
     Rake::Task['bash'].execute
     Rake::Task['conky'].execute
-    Rake::Task['vim'].execute
+    Rake::Task['git'].execute
+    Rake::Task['vim:all'].execute
 end
 
 desc 'deploys my awesome files'
