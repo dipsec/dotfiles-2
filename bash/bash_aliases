@@ -1,10 +1,11 @@
-alias .....="cd ../../../.."
-alias ....="cd ../../.."
-alias ...="cd ../.."
-alias ..="cd .."
+#alias .....="cd ../../../.."
+#alias ....="cd ../../.."
+#alias ...="cd ../.."
+#alias ..="cd .."
 alias calcom='ssh chris-allen-lane.com'
 alias cb='xclip -selection clipboard'
 alias clip='xclip -selection clipboard'
+alias less='less -r'
 alias off='sudo shutdown -P now'
 alias q='exit'
 alias sql='mysql -uroot -proot'

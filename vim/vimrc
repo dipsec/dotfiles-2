@@ -1,4 +1,4 @@
-all pathogen#infect()
+execute pathogen#infect()
 
 " stuff to improve
 " - :noh and :Noh
