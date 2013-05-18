@@ -89,10 +89,10 @@ nnoremap <silent> <leader>h :split<CR>
 nnoremap <silent> <leader>q :q<CR> 
 nnoremap <silent> <leader>w :w<CR> 
 nnoremap <silent> <leader>sc :e /tmp/scratch.txt<CR> 
-nnoremap <silent> <leader>s :sort<CR> 
 nnoremap <silent> <leader>v :vsplit<CR> 
 nnoremap j gj
 nnoremap k gk
+vnoremap <silent> <leader>s :sort<CR> 
 
 " Stupid shift key fixes
 cmap W w
