@@ -48,11 +48,11 @@
   last = diff HEAD^                 # diff last committed change
 
   # log
-  l            = log --graph --date = short
-  changes      = log --pretty       = format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
-  short        = log --pretty       = format:\"%h %cr %cn %Cgreen%s%Creset\"
-  changelog    = log --pretty       = format:\" * %s\"
-  shortnocolor = log --pretty       = format:\"%h %cr %cn %s\"
+  l            = log --graph --date=short
+  changes      = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+  short        = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
+  changelog    = log --pretty=format:\" * %s\"
+  shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
 
   # pull
   pl = pull                         # pull
