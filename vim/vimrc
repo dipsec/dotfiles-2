@@ -1,7 +1,13 @@
-call pathogen#infect()
+all pathogen#infect()
 
-" What still sucks
+" stuff to improve
 " - :noh and :Noh
+" - powerline 
+" - autocomplete
+" - backspace (Ctrl+w)
+" - vimrc formatting
+" - skybison?
+" - command-t
 " - changing tabs
 " - pasting from the system clipboard
 
@@ -66,7 +72,7 @@ set smartcase                   " case sensitive when uc present
 set smarttab
 set softtabstop=4               " let backspace delete indent
 set t_Co=256
-set tabstop=4 shiftwidth=4
+set tabstop=4 shiftwidth=4      " an indentation every four columns
 set virtualedit=onemore         " allow for cursor beyond last character
 set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to
 set wildmenu                    " show list instead of just completing
