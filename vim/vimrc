@@ -1,10 +1,9 @@
 call pathogen#infect()
 
 " What still sucks
-" - set nospell
 " - :noh and :Noh
-" - scratch
 " - changing tabs
+" - pasting from the system clipboard
 
 " ----- Color Scheme -----
 set guifont=inconsolata
@@ -48,6 +47,8 @@ set colorcolumn=80,120          " highlight the 80th column
 set cursorline                  " highlight current line
 set expandtab                   " tabs are spaces, not tabs
 set foldenable                  " auto fold code
+set foldmethod=indent
+set foldnestmax=3
 set hidden
 set hlsearch                    " highlight search terms
 set ignorecase                  " case insensitive search
@@ -55,6 +56,9 @@ set incsearch                   " find as you type search
 set linespace=0                 " No extra spaces between rows
 set matchpairs+=<:>             " match, to be used with %
 set mouse=a                     " automatically enable mouse usage
+set nobackup
+set noswapfile
+set nowb
 set nowrap                      " wrap long lines
 set nu                          " Line numbers on
 set si
@@ -71,19 +75,24 @@ set winminheight=0              " windows can be 0 line high
 
 let mapleader = ","
 
-" Easier moving in tabs and windows
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-L> <C-W>l
-map <C-H> <C-W>h
+cmap W w
+cmap WQ wq
+cmap wQ wq
+cmap Q q
+cmap Tabe tabe
 
-" Escape Insert Mode with jk and kj   
 :imap jk <Esc>
 :imap JK <Esc>
 :imap kj <Esc>
 :imap KJ <Esc>
 
-" convenience mappings
+nmap <C-H> <C-W>h
+nmap <C-J> <C-W>j
+nmap <C-K> <C-W>k
+nmap <C-L> <C-W>l
+nmap <silent> <leader>f :NERDTreeToggle<CR> 
+nmap <silent> <leader>t :TlistToggle<CR> 
+
 nnoremap <silent> <leader>d :bd<CR> 
 nnoremap <silent> <leader>h :split<CR> 
 nnoremap <silent> <leader>q :q<CR> 
@@ -92,26 +101,15 @@ nnoremap <silent> <leader>sc :e /tmp/scratch.txt<CR>
 nnoremap <silent> <leader>v :vsplit<CR> 
 nnoremap j gj
 nnoremap k gk
+
 vnoremap <silent> <leader>s :sort<CR> 
-
-" Stupid shift key fixes
-cmap W w
-cmap WQ wq
-cmap wQ wq
-cmap Q q
-cmap Tabe tabe
-
-" visual shifting (does not exit Visual mode)
+vnoremap <silent> <leader>te :Tab /=<CR> 
 vnoremap < <gv
 vnoremap > >gv
 
 " specify custom file types
 au BufNewFile,BufRead *.md.erb set filetype=markdown
 au BufNewFile,BufRead *.less set filetype=css
-
-" plugin-specifc mappings
-nmap <silent> <leader>f :NERDTreeToggle<CR> 
-nmap <silent> <leader>t :TlistToggle<CR> 
 
 " open the tag list browser on the right
 let Tlist_Use_Right_Window = 1

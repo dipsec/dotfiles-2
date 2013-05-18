@@ -26,6 +26,13 @@ task :conky do
     puts 'this is a stub'
 end
 
+desc 'deploys my git files'
+task :git do
+    `rm  ~/.gitconfig`
+    `cp git/gitconfig ~/.gitconfig`
+    puts 'git deployed'
+end
+
 namespace :vim do
     desc 'deploys my vim files'
     task :all do
