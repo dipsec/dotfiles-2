@@ -1,7 +1,6 @@
 execute pathogen#infect()
 
 " stuff to improve
-" - :noh and :Noh
 " - powerline 
 " - autocomplete
 " - backspace (Ctrl+w)
@@ -106,6 +105,7 @@ nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <leader>w :w<CR> 
 nnoremap <silent> <leader>sc :e /tmp/scratch.txt<CR> 
 nnoremap <silent> <leader>v :vsplit<CR> 
+nnoremap <silent> <space> :noh<CR> 
 nnoremap j gj
 nnoremap k gk
 
