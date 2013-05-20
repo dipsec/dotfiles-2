@@ -99,19 +99,27 @@ nmap <C-L> <C-W>l
 nmap <silent> <leader>f :NERDTreeToggle<CR> 
 nmap <silent> <leader>t :TlistToggle<CR> 
 
+"nnoremap tm  :tabm<Space>
 nnoremap <silent> <leader>d :bd<CR> 
 nnoremap <silent> <leader>h :split<CR> 
 nnoremap <silent> <leader>q :q<CR> 
-nnoremap <silent> <leader>w :w<CR> 
+nnoremap <silent> <leader>qa :qa<CR> 
 nnoremap <silent> <leader>sc :e /tmp/scratch.txt<CR> 
 nnoremap <silent> <leader>v :vsplit<CR> 
+nnoremap <silent> <leader>w :w<CR> 
 nnoremap <silent> <space> :noh<CR> 
 nnoremap j gj
 nnoremap k gk
-
+nnoremap td :tabclose<CR>
+nnoremap tf :tabfirst<CR>
+nnoremap tj :tabnext<CR>
+nnoremap tk :tabprev<CR>
+nnoremap tl :tablast<CR>
+nnoremap tn :tabnew<CR>
+nnoremap tn :tabnext<Space>
+vnoremap < <gv
 vnoremap <silent> <leader>s :sort<CR> 
 vnoremap <silent> <leader>te :Tab /=<CR> 
-vnoremap < <gv
 vnoremap > >gv
 
 " specify custom file types
