@@ -81,16 +81,13 @@ set winminheight=0              " windows can be 0 line high
 
 let mapleader = ","
 
-cmap W w
-cmap WQ wq
-cmap wQ wq
-cmap Q q
 cmap Tabe tabe
 
 :imap jk <Esc>
 :imap JK <Esc>
 :imap kj <Esc>
 :imap KJ <Esc>
+:imap <C-BS> <C-W>
 
 nmap <C-H> <C-W>h
 nmap <C-J> <C-W>j
@@ -115,8 +112,8 @@ nnoremap tf :tabfirst<CR>
 nnoremap tj :tabnext<CR>
 nnoremap tk :tabprev<CR>
 nnoremap tl :tablast<CR>
-nnoremap tn :tabnew<CR>
-nnoremap tn :tabnext<Space>
+nnoremap tt :tabnew<CR>
+nnoremap tn :tabnext<CR>
 vnoremap < <gv
 vnoremap <silent> <leader>s :sort<CR> 
 vnoremap <silent> <leader>te :Tab /=<CR> 
@@ -124,7 +121,6 @@ vnoremap > >gv
 
 " specify custom file types
 au BufNewFile,BufRead *.json set filetype=javascript
-au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.md.erb set filetype=markdown
 
 " open the tag list browser on the right
