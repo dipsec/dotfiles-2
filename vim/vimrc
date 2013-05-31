@@ -93,6 +93,8 @@ nmap <C-H> <C-W>h
 nmap <C-J> <C-W>j
 nmap <C-K> <C-W>k
 nmap <C-L> <C-W>l
+nmap <C-j> }
+nmap <C-k> {
 nmap <silent> <leader>f :NERDTreeToggle<CR> 
 nmap <silent> <leader>t :TlistToggle<CR> 
 
@@ -100,7 +102,6 @@ nmap <silent> <leader>t :TlistToggle<CR>
 nnoremap <silent> <leader>d :bd<CR> 
 nnoremap <silent> <leader>h :split<CR> 
 nnoremap <silent> <leader>q :q<CR> 
-nnoremap <silent> <leader>qa :qa<CR> 
 nnoremap <silent> <leader>sc :e /tmp/scratch.txt<CR> 
 nnoremap <silent> <leader>v :vsplit<CR> 
 nnoremap <silent> <leader>w :w<CR> 
