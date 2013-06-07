@@ -121,7 +121,7 @@ au BufNewFile,BufRead *.json set filetype=javascript
 au BufNewFile,BufRead *.md.erb set filetype=markdown
 
 " only indent JavaScript files 2 spaces
-autocmd FileType js setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
 " open the tag list browser on the right
 let Tlist_Use_Right_Window = 1
