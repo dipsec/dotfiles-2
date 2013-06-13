@@ -5,6 +5,7 @@ alias ..="cd .."
 alias calcom='ssh chris-allen-lane.com'
 alias cb='xclip -selection clipboard'
 alias clip='xclip -selection clipboard'
+alias d='cd ~/Desktop'
 alias desk='cd ~/Desktop'
 alias g='git'
 alias less='less -r'
