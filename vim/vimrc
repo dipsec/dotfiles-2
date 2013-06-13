@@ -89,6 +89,7 @@ cmap Tabe tabe
 :imap <C-BS> <C-W>
 
 "nnoremap tm  :tabm<Space>
+nnoremap <leader>x @q
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
