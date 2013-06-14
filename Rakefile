@@ -3,6 +3,7 @@ task :all do
     Rake::Task['awesome'].execute
     Rake::Task['bash'].execute
     Rake::Task['conky'].execute
+    Rake::Task['fonts'].execute
     Rake::Task['git'].execute
     Rake::Task['vim:all'].execute
 end
@@ -25,6 +26,14 @@ end
 desc 'deploys my conky files'
 task :conky do
     puts 'this is a stub'
+end
+
+desc 'deploys my custom fonts'
+task :fonts do
+    `rm -rf ~/.fonts`
+    `mkdir ~/.fonts`
+    `cp fonts/* ~/.fonts/`
+    puts 'fonts deployed'
 end
 
 desc 'deploys my git files'

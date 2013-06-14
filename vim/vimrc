@@ -1,9 +1,22 @@
+" stuff to improve
+" - powerline 
+" - autocomplete
+" - backspace (Ctrl+w)
+" - vimrc formatting
+" - skybison?
+" - command-t
+" - pasting from the system clipboard
+
+" ----- Vundle Bootstrap -----
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" ----- Vundle Bundles -----
 Bundle 'gmarik/vundle'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'Lokaltog/powerline-fonts'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/tabular'
 Bundle 'groenewege/vim-less'
@@ -16,24 +29,26 @@ Bundle 'tomtom/checksyntax_vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 
-" stuff to improve
-" - powerline 
-" - autocomplete
-" - backspace (Ctrl+w)
-" - vimrc formatting
-" - skybison?
-" - command-t
-" - pasting from the system clipboard
+filetype plugin indent on
 
 " ----- Color Scheme -----
-set guifont=inconsolata
+"set guifont=inconsolata
+" ----- Powerline setup -----
+set guifont=Inconsolata\ for\ Powerline\ 10
+set laststatus=2
+set guioptions=-M
+set guioptions=-T
+set guioptions=-r
 :colorscheme molokai
 let g:molokai_original = 1
+
 
 highlight ColorColumn ctermbg=4 " change the highlight to darkblue
 highlight CursorLine ctermbg=0  " change the highlight to darkblue
 scriptencoding utf-8
 syntax on
+
+
 
 " ----- Command Line -----
 "if has('cmdline_info')
@@ -142,4 +157,3 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 " open the tag list browser on the right
 let Tlist_Use_Right_Window = 1
 
-filetype plugin indent on
