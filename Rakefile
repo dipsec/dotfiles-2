@@ -5,7 +5,8 @@ task :all do
     Rake::Task['conky'].execute
     Rake::Task['fonts'].execute
     Rake::Task['git'].execute
-    Rake::Task['vim:all'].execute
+    Rake::Task['vim:vimrc'].execute
+    Rake::Task['vim:install'].execute
 end
 
 desc 'deploys my awesome files'
@@ -45,13 +46,6 @@ end
 
 namespace :vim do
     desc 'deploys my vim files'
-
-    #task :all do
-        #`rm -rf ~/.vim ~/.vimrc`
-        #`cp -r vim ~/.vim`
-        #`cp vim/vimrc ~/.vimrc`
-        #puts 'vim deployed'
-    #end
 
     task :install do
         `vim +BundleInstall +qall > /dev/null 2>&1`
