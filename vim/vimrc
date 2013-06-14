@@ -4,11 +4,17 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-
-Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'godlygeek/tabular'
+Bundle 'groenewege/vim-less'
+Bundle 'hail2u/vim-css3-syntax'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tomasr/molokai'
+Bundle 'tomtom/checksyntax_vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
 
 " stuff to improve
 " - powerline 
@@ -46,16 +52,6 @@ syntax on
 	"set statusline+=\ [%{getcwd()}]
 	"set statusline+=%=%-14.(%l,%c%V%)\ %p%%
 "endif
-
-
-
-
-" ----- Vundle -----
-
-
-
-" powerline
-"set rtp+=~/.vim/bundle/powerline/bindings/vim
 
 " ----- General -----
 "set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
