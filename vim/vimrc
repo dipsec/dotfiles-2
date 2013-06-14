@@ -1,4 +1,14 @@
-execute pathogen#infect()
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'tpope/vim-rails.git'
 
 " stuff to improve
 " - powerline 
@@ -14,7 +24,6 @@ set guifont=inconsolata
 :colorscheme molokai
 let g:molokai_original = 1
 
-filetype plugin indent on
 highlight ColorColumn ctermbg=4 " change the highlight to darkblue
 highlight CursorLine ctermbg=0  " change the highlight to darkblue
 scriptencoding utf-8
@@ -39,8 +48,14 @@ syntax on
 "endif
 
 
+
+
+" ----- Vundle -----
+
+
+
 " powerline
-set rtp+=~/.vim/bundle/powerline/bindings/vim
+"set rtp+=~/.vim/bundle/powerline/bindings/vim
 
 " ----- General -----
 "set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
@@ -130,3 +145,5 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
 " open the tag list browser on the right
 let Tlist_Use_Right_Window = 1
+
+filetype plugin indent on
