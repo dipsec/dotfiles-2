@@ -44,6 +44,13 @@ task :git do
     puts 'git deployed'
 end
 
+desc 'deploys my git-ripped config'
+task :git_ripped do
+    `rm  ~/.git-ripped.json`
+    `cp git-ripped/git-ripped.json ~/.git-ripped.json`
+    puts 'git-ripped deployed'
+end
+
 namespace :vim do
     desc 'deploys my vim files'
 
@@ -52,7 +59,7 @@ namespace :vim do
         puts 'Vundle bundles installed'
     end
 
-    desc 'deploys my .vimrc only'
+    desc 'deploys my vimrc only'
     task :vimrc do
         `rm -rf ~/.vimrc`
         `cp vim/vimrc ~/.vimrc`

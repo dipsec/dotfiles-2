@@ -1,0 +1,34 @@
+{
+    "adaptive"      : true,
+    "color"         : "cyan",
+    "logfile"       : false,
+    "max_rest_time" : 180,
+    "min_rest_time" : 10,
+    "random"        : false,
+    "exercises":[
+        {
+            "name"        : "1-Arm push-ups",
+            "min"         : 3,
+            "max"         : 5,
+            "measurement" : "reps"
+        },
+        {
+            "name"        : "35lb KB Weighted pull-ups",
+            "min"         : 3,
+            "max"         : 5,
+            "measurement" : "reps"
+        },
+        {
+            "name"        : "35lb KB Weighted pistols",
+            "min"         : 3,
+            "max"         : 5,
+            "measurement" : "reps"
+        },
+        {
+            "name"        : "53lb KB 1-Hand snatches",
+            "min"         : 10,
+            "max"         : 30,
+            "measurement" : "reps"
+        }
+    ]
+}
