@@ -21,22 +21,26 @@ scriptencoding utf-8
 syntax on
 
 " ----- Command Line -----
-if has('cmdline_info')
-	set ruler                   " show the ruler
-	set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
-	set showcmd                 " show partial commands in status line and selected characters/lines in visual mode  
-endif
+"if has('cmdline_info')
+	"set ruler                   " show the ruler
+	"set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
+	"set showcmd                 " show partial commands in status line and selected characters/lines in visual mode  
+"endif
 
 " ----- Status Line -----
-if has('statusline')
-	set laststatus=2
-	set statusline=%<%f\
-	set statusline+=%w%h%m%r
-	set statusline+=%{fugitive#statusline()}
-	set statusline+=\ [%{&ff}/%Y]
-	set statusline+=\ [%{getcwd()}]
-	set statusline+=%=%-14.(%l,%c%V%)\ %p%%
-endif
+"if has('statusline')
+	"set laststatus=2
+	"set statusline=%<%f\
+	"set statusline+=%w%h%m%r
+	"set statusline+=%{fugitive#statusline()}
+	"set statusline+=\ [%{&ff}/%Y]
+	"set statusline+=\ [%{getcwd()}]
+	"set statusline+=%=%-14.(%l,%c%V%)\ %p%%
+"endif
+
+
+" powerline
+set rtp+=~/.vim/bundle/powerline/bindings/vim
 
 " ----- General -----
 "set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
