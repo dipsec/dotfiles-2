@@ -45,11 +45,17 @@ end
 
 namespace :vim do
     desc 'deploys my vim files'
-    task :all do
-        `rm -rf ~/.vim ~/.vimrc`
-        `cp -r vim ~/.vim`
-        `cp vim/vimrc ~/.vimrc`
-        puts 'vim deployed'
+
+    #task :all do
+        #`rm -rf ~/.vim ~/.vimrc`
+        #`cp -r vim ~/.vim`
+        #`cp vim/vimrc ~/.vimrc`
+        #puts 'vim deployed'
+    #end
+
+    task :install do
+        `vim +BundleInstall +qall > /dev/null 2>&1`
+        puts 'Vundle bundles installed'
     end
 
     desc 'deploys my .vimrc only'
