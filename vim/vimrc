@@ -122,7 +122,7 @@ nnoremap tn :tabnext<CR>
 nnoremap tt :tabnew<CR>
 vnoremap < <gv
 vnoremap <silent> <leader>s :sort<CR> 
-vnoremap <silent> <leader>te :Tab /=<CR> 
+vnoremap <silent> <leader>a :Tab /=<CR> 
 vnoremap > >gv
 
 " ----- Filetype-specific -----
