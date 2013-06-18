@@ -1,12 +1,21 @@
 desc 'deploys all files'
 task :all do
+    Rake::Task['ack'].execute
     Rake::Task['awesome'].execute
     Rake::Task['bash'].execute
     Rake::Task['conky'].execute
     Rake::Task['fonts'].execute
     Rake::Task['git'].execute
+    Rake::Task['git_ripped'].execute
     Rake::Task['vim:vimrc'].execute
     Rake::Task['vim:install'].execute
+end
+
+desc 'deploys my ackrc'
+task :ack do
+    `rm  ~/.ackrc`
+    `cp ack-grep/ackrc ~/.ackrc`
+    puts 'ackrc deployed'
 end
 
 desc 'deploys my awesome files'
