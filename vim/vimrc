@@ -130,7 +130,8 @@ vnoremap > >gv
 au BufNewFile,BufRead *.json set filetype=javascript
 au BufNewFile,BufRead *.md.erb set filetype=markdown
 
-" only indent JavaScript and Coffeescript files 2 spaces
+" apply 2 space indents to certain filetypes
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 
