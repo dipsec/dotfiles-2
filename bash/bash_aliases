@@ -1,7 +1,11 @@
-alias .....="cd ../../../.."
-alias ....="cd ../../.."
-alias ...="cd ../.."
-alias ..="cd .."
+# the trailing semicolons allow you to "chain" these commands, as in:
+# .. ls
+alias ......="cd ../../../../..;"
+alias .....="cd ../../../..;"
+alias ....="cd ../../..;"
+alias ...="cd ../..;"
+alias ..="cd ..;"
+
 alias calcom='ssh chris-allen-lane.com'
 alias cb='xclip -selection clipboard'
 alias clip='xclip -selection clipboard'
