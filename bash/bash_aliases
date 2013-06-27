@@ -22,4 +22,5 @@ alias up='sudo apt-get update && sudo apt-get upgrade --assume-yes && sudo apt-g
 alias via='cd ~/Source/www/clients/viaforensics'
 alias vp='cd ~/Source/www/clients/viaforensics/viaprotect'
 alias www='cd ~/Source/www'
+alias ws='php -S localhost:3000'
 alias z='cd'
