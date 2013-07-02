@@ -115,8 +115,8 @@ nnoremap j gj
 nnoremap k gk
 nnoremap td :tabclose<CR>
 nnoremap tf :tabfirst<CR>
-nnoremap tj :tabnext<CR>
-nnoremap tk :tabprev<CR>
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
 nnoremap tl :tablast<CR>
 nnoremap tn :tabnext<CR>
 nnoremap tt :tabnew<CR>
