@@ -12,10 +12,10 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " ----- Vundle Bundles -----
-Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'Lokaltog/powerline-fonts'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'gmarik/vundle'
 Bundle 'godlygeek/tabular'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
@@ -27,6 +27,7 @@ Bundle 'tomasr/molokai'
 Bundle 'tomtom/checksyntax_vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/nginx.vim'
 
 filetype plugin indent on
 
@@ -61,7 +62,7 @@ set cursorline                  " highlight current line
 set expandtab                   " tabs are spaces, not tabs
 set foldenable                  " auto fold code
 set foldmethod=indent
-set foldnestmax=3
+set foldnestmax=4
 set hidden
 set hlsearch                    " highlight search terms
 set ignorecase                  " case insensitive search
@@ -74,13 +75,13 @@ set noswapfile
 set nowb
 set nowrap                      " wrap long lines
 set nu                          " Line numbers on
-set shiftwidth=4                " an indentation every four columns
+set shiftwidth=2                " an indentation every four columns
 set si
 set smartcase                   " case sensitive when uc present
 set smarttab
-set softtabstop=4               " let backspace delete indent
+set softtabstop=2               " let backspace delete indent
 set t_Co=256
-set tabstop=4                   " an indentation every four columns
+set tabstop=2                   " an indentation every four columns
 set virtualedit=onemore         " allow for cursor beyond last character
 set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to
 set wildmenu                    " show list instead of just completing
@@ -130,8 +131,6 @@ vnoremap > >gv
 au BufNewFile,BufRead *.json set filetype=javascript
 au BufNewFile,BufRead *.md.erb set filetype=markdown
 
-" apply 2 space indents to certain filetypes
-autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+" apply 4 space indents to certain filetypes
+autocmd FileType php setlocal shiftwidth=4 tabstop=4
 
