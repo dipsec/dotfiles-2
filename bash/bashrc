@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Chris's additions
+# my additions
 # Appending to the system path
 PATH=$PATH:/home/chris/Source/on_path
 PATH=$PATH:/var/lib/gems/1.8/bin
@@ -121,4 +121,6 @@ PATH=$PATH:/home/chris/.cabal/bin
 PATH=$PATH:/home/chris/Applications/android-sdk-linux/tools
 PATH=$PATH:/home/chris/Applications/android-sdk-linux/platform-tools
 export PATH
+
+export EDITOR=vim
 
