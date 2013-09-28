@@ -49,11 +49,11 @@
   last = diff HEAD^                 # diff last committed change
 
   # log
-  l            = log --graph --date=short
-  changes      = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
-  short        = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
-  changelog    = log --pretty=format:\" * %s\"
-  shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
+  #l            = log --graph --date=short
+  #changes      = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+  #short        = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
+  #changelog    = log --pretty=format:\" * %s\"
+  #shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
 
   # pull
   pl = pull                         # pull
@@ -71,7 +71,7 @@
   # reset
   unstage  = reset HEAD             # remove files from index (tracking)
   uncommit = reset --soft HEAD^     # go back before last commit, with files in uncommitted state
-  filelog  = log -u                 # show changes to a file
+  #filelog  = log -u                 # show changes to a file
   mt       = mergetool              # fire up the merge tool
 
   # stash
@@ -93,8 +93,8 @@
   svnd = svn dcommit
   svnl = svn log --oneline --show-commit
 
-[format]
-  pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+#[format]
+#  pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 
 #[mergetool]
   #prompt = false
@@ -121,7 +121,7 @@
 
 [core]
   #autocrlf = false
-  editor = vim
+	editor = vim
   #excludesfile = ~/.yadr/git/gitignore
 
 #[advice]
