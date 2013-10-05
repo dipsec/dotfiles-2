@@ -9,6 +9,7 @@ task :all do
   Rake::Task['git_ripped'].execute
   Rake::Task['vim:vimrc'].execute
   Rake::Task['vim:install'].execute
+  Rake::Task['x'].execute
 end
 
 desc 'deploys my ackrc'
