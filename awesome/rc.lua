@@ -432,12 +432,12 @@ function run_once(prg, arg_string, pname, screen)
 end
 
 -- {{{ Startup applications
-run_once('xcompmgr', '-cfF -D 3 &')
-run_once('xfsettingsd')
-run_once('xfce4-volumed')
-run_once('pavucontrol')
+--run_once('xcompmgr', '-cfF -D 3 &')
+--run_once('xfsettingsd')
+--run_once('xfce4-volumed')
+--run_once('pavucontrol')
 -- run_once('conky -c /home/chris/Source/terminal/conky/conkyrc-right &')
 -- run_once('conky -c /home/chris/Source/terminal/conky/conkyrc-left &')
-run_once('xscreensaver', '-no-splash &')
-run_once('synapse', '-s')
+--run_once('xscreensaver', '-no-splash &')
+--run_once('synapse', '-s')
 -- }}}
