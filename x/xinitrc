@@ -13,5 +13,8 @@ pavucontrol &
 # synapse
 synapse -s &
 
+# screensaver
+xscreensaver -no-splash &
+
 # start awesome
 exec awesome
