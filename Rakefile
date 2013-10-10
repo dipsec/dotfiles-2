@@ -4,6 +4,7 @@ task :all do
   Rake::Task['awesome'].execute
   Rake::Task['bash'].execute
   Rake::Task['conky'].execute
+  Rake::Task['feh'].execute
   Rake::Task['fonts'].execute
   Rake::Task['git'].execute
   Rake::Task['git_ripped'].execute
@@ -45,6 +46,13 @@ task :fonts do
   `mkdir ~/.fonts`
   `cp fonts/* ~/.fonts/`
   puts 'fonts deployed'
+end
+
+desc 'deploys my feh files'
+task :feh do
+  `rm  ~/.fehbg`
+  `cp feh/fehbg ~/.fehbg`
+  puts 'feh deployed'
 end
 
 desc 'deploys my git files'
