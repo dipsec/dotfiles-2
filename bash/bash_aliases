@@ -6,22 +6,28 @@ alias ....="cd ../../..;"
 alias ...="cd ../..;"
 alias ..="cd ..;"
 
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# some more ls aliases
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+
 alias calcom='ssh chris-allen-lane.com'
 alias cb='xclip -selection clipboard'
 alias clip='xclip -selection clipboard'
-alias d='cd ~/Desktop'
-alias desk='cd ~/Desktop'
-alias g='git'
+alias d='cd ~/desktop'
+alias desk='cd ~/desktop'
 alias less='less -r'
 alias off='sudo shutdown -P now'
 alias q='exit'
-alias sql='mysql -uroot -proot'
-alias src='cd ~/Source/'
-alias trm='cd ~/Source/terminal'
+alias src='cd ~/src/'
 alias up='sudo apt-get update && sudo apt-get upgrade --assume-yes && sudo apt-get autoclean && sudo apt-get autoremove'
-alias via='cd ~/Source/www/clients/viaforensics'
-alias viavpn='sudo openvpn --config /home/chris/.ssh/viaforensics.ovpn --auth-retry interact'
-alias vp='cd ~/Source/www/clients/viaforensics/viaprotect'
+#alias via='cd ~/Source/www/clients/viaforensics'
+#alias viavpn='sudo openvpn --config /home/chris/.ssh/viaforensics.ovpn --auth-retry interact'
+#alias vp='cd ~/Source/www/clients/viaforensics/viaprotect'
 alias ws='php -S localhost:3000'
-alias www='cd ~/Source/www'
+#alias www='cd ~/Source/www'
 alias z='cd'
