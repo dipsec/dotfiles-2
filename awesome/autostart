@@ -20,26 +20,26 @@
 ## Have fun & happy CrunchBangin'! :)
 
 ## Quad monitors
-xrandr --output DP-1 --mode 1920x1080 --pos 1080x0 --rotate inverted --output DVI-I-1 --mode 1920x1080 --pos 0x1080 --rotate left --output DVI-D-1 --mode 1920x1080 --pos 3000x1080 --rotate right --output HDMI-1 --mode 1920x1080 --pos 1080x1080 --rotate normal
+xrandr --output DP-1    --mode 1920x1080 --pos 1080x0    --rotate inverted \
+       --output DVI-I-1 --mode 1920x1080 --pos 0x1080    --rotate left \
+       --output DVI-D-1 --mode 1920x1080 --pos 3000x1080 --rotate right \
+       --output HDMI-1  --mode 1920x1080 --pos 1080x1080 --rotate normal
 
 ## GNOME PolicyKit and Keyring
 eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 
 ## Set root window colour
-hsetroot -solid "#2E3436" &
+hsetroot -solid "#2E3436"
 
 ## Background and compositor
-nitrogen --restore && cb-compositor --start &
-
-## Volume control for systray
-#(sleep 1s && pnmixer) &
-pnmixer &
+nitrogen --restore
+cb-compositor --start
 
 ## Volume keys daemon
-xfce4-volumed &
+xfce4-volumed
 
 ## Enable power management
-xfce4-power-manager &
+xfce4-power-manager
 
 ## Detect and configure touchpad. See 'man synclient' for more info.
 if egrep -iq 'touchpad' /proc/bus/input/devices; then
@@ -54,13 +54,13 @@ xscreensaver -no-splash &
 #(sleep 3s && clipit) &
 
 ## Adjust the values according to your preferences.
-xset r rate 150 50 &
+xset r rate 150 50
 
 ## Turn on/off system beep
-xset b off &
+xset b off
 
 ## Run the conky
 conky -q &
 
 ## Synapse
-synapse --startup &
+synapse --startup
