@@ -69,6 +69,13 @@ task :git_ripped do
   puts 'git-ripped deployed'
 end
 
+desc 'deploys my slim files'
+task :slim do
+  `sudo rm /etc/slim.conf`
+  `sudo cp slim/slim.conf /etc/slim.conf`
+  puts 'slim files deployed'
+end
+
 namespace :vim do
   desc 'deploys my vim files'
 
