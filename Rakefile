@@ -69,6 +69,12 @@ task :git_ripped do
   puts 'git-ripped deployed'
 end
 
+desc 'remasters my crunchbang system'
+task :remaster do
+  `sudo remaster/remaster`
+  puts 'system remastered'
+end
+
 desc 'deploys my slim files'
 task :slim do
   `sudo rm /etc/slim.conf`
