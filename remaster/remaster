@@ -33,6 +33,7 @@ apt-get --assume-yes install curl
 apt-get --assume-yes install fontforge
 apt-get --assume-yes install imagemagick
 apt-get --assume-yes install irrsi
+apt-get --assume-yes install libnss3-tools
 apt-get --assume-yes install nmap
 apt-get --assume-yes install openvpn
 apt-get --assume-yes install pinta
