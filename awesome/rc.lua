@@ -82,7 +82,7 @@ if screen.count() == 4 then
 else
     for s = 1, screen.count() do
         -- Each screen has its own tag table.
-        tags[s] = awful.tag({ '1.gen  ', '2.www', }, s, layouts[1])
+        tags[s] = awful.tag({ '1', '2', '3', '4', '5'}, s, layouts[1])
     end
 end
 -- }}}
@@ -91,7 +91,7 @@ end
 -- Create a laucher widget and a main menu
 myawesomemenu = {
    { 'manual'      , terminal .. ' -e man awesome' }         ,
-   { 'edit config' , editor_cmd .. ' ' .. awesome.conffile } ,
+   -- { 'edit config' , editor_cmd .. ' ' .. awesome.conffile } ,
    { 'restart'     , awesome.restart }                       ,
    { 'quit'        , awesome.quit }
 }
@@ -362,14 +362,10 @@ awful.rules.rules = {
         rule       = { class    = 'gimp' } ,
         properties = { floating = true   }
     },
-    {
-        rule       = { class = 'Skype'    } ,
-        properties = { tag   = tags[1][4] }
-    },
-    {
-        rule       = { class = 'Thunderbird' } ,
-        properties = { tag   = tags[1][4]    }
-    },
+    --{
+        --rule       = { class = 'Thunderbird' } ,
+        --properties = { tag   = tags[1][4]    }
+    --},
     {
         rule       = { class    = 'Dialog' } ,
         properties = { floating = true     }
@@ -412,4 +408,5 @@ client.add_signal('focus'   , function(c) c.border_color = beautiful.border_focu
 client.add_signal('unfocus' , function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-awful.util.spawn_with_shell("/home/chris/.config/awesome/autostart &")
+-- launch my autostart script
+awful.util.spawn_with_shell("/home/chris/.config/awesome/autostart")
