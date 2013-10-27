@@ -26,6 +26,6 @@ alias up='sudo apt-get update && sudo apt-get upgrade --assume-yes && sudo apt-g
 alias vf='cd ~/src/www/vf'
 alias viavpn='sudo openvpn --config /home/chris/.ssh/viaforensics.ovpn --auth-retry interact'
 alias vp='cd ~/src/www/vf/viaprotect-web'
-alias ws='php -S localhost:3000'
+alias ws='python -m SimpleHTTPServer'
 alias www='cd ~/src/www'
 alias z='cd'
