@@ -51,6 +51,9 @@ apt-get --assume-yes install vim-nox
 apt-get --assume-yes install vlc vlc-plugin-pulse
 apt-get --assume-yes install xclip
 
+# east-asian language fonts
+apt-get --assume-yes install ttf-arphic-uming ttf-wqy-zenhei ttf-sazanami-mincho ttf-sazanami-gothic ttf-unfonts-core ttf-unfonts-extra ttf-indic-fonts ttf-tmuni ttf-dzongkha ttf-khmeros ttf-jura ttf-sinhala-lklug ttf-sil-padauk
+
 # cleann up
 apt-get autoclean
 apt-get autoremove
