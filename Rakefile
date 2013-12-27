@@ -35,6 +35,12 @@ task :bash do
   puts 'bash files deployed'
 end
 
+desc 'deploys my bin files'
+task :bin do
+  `cp bin/* ~/bin`
+  puts 'bin files deployed'
+end
+
 desc 'deploys my conky files'
 task :conky do
   puts 'this is a stub'

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# bleachbit
+bleachbit -c --preset
+
+# back-ups
+rsync -av --delete /home/chris/* /media/truecrypt2/fourside/chris/
+rsync -av --delete /media/truecrypt1/* /media/truecrypt2/fourside/storage/
+
+# trim
+# @todo

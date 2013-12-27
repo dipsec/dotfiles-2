@@ -27,6 +27,7 @@ echo 'Installing system packages...'
 # apt-get --assume-yes install xul-ext-lightning
 # apt-get --assume-yes install arandr
 apt-get --assume-yes install ack-grep
+apt-get --assume-yes install boinc-client boinc-manager
 apt-get --assume-yes install build-essential
 apt-get --assume-yes install chromium-browser
 apt-get --assume-yes install curl
@@ -37,8 +38,8 @@ apt-get --assume-yes install irrsi
 apt-get --assume-yes install libnss3-tools
 apt-get --assume-yes install nmap
 apt-get --assume-yes install openvpn
-apt-get --assume-yes install pinta
 apt-get --assume-yes install pcmanfm
+apt-get --assume-yes install pinta
 apt-get --assume-yes install python-fontforge
 apt-get --assume-yes install rake
 apt-get --assume-yes install ruby
