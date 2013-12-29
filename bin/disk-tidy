@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# configs
+LOGPATH='/var/log/disk-tidy/disk-tidy.log'
+
+# bleachbit
+bleachbit -c --preset 2> /dev/null 1> $LOGPATH
+
+# trim
+# @todo

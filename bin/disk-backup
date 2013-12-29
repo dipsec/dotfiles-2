@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# configs
+BACKUP_DIR='/media/truecrypt2/fourside'
+LOGPATH='/var/log/disk-backup/disk-backup.log'
+
+# back-ups
+echo "Backup created " `date` > $LOGPATH
+rsync -av --delete /home/chris "$BACKUP_DIR/chris" >> $LOGPATH
+rsync -av --delete --exclude="lost+found" /media/truecrypt1 "$BACKUP_DIR" >> $LOGPATH
+
+# @todo: external backup
+
+# @todo: back-up critical files with tarsnap
