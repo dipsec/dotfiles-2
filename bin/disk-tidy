@@ -1,10 +1,16 @@
 #!/bin/bash
 
+notify-send "Disk cleanup" "The system is now cleaning its disks..."
+
 # configs
 LOGPATH='/var/log/disk-tidy/disk-tidy.log'
 
+echo "Disk cleanup last run on " `date` > $LOGPATH
+
 # bleachbit
-bleachbit -c --preset 2> /dev/null 1> $LOGPATH
+bleachbit -c --preset 2> /dev/null 1>> $LOGPATH
 
 # trim
 # @todo
+
+notify-send "Disk cleanup" "Disk cleanup complete."
