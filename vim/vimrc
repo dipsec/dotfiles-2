@@ -24,8 +24,6 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tomasr/molokai'
-Bundle 'tomtom/checksyntax_vim'
-"Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/nginx.vim'
 
@@ -49,7 +47,7 @@ let mapleader = ","
 let Tlist_Use_Right_Window = 1
 
 " ----- General -----
-"set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
+"set mouse=a                     " automatically enable mouse usage
 "set scrolljump=5                " lines to scroll when cursor leaves screen
 "set scrolloff=3                 " minimum lines to keep above and below cursor
 "set showmatch                   " show matching brackets/parenthesis
@@ -69,12 +67,12 @@ set ignorecase                  " case insensitive search
 set incsearch                   " find as you type search
 set linespace=0                 " No extra spaces between rows
 set matchpairs+=<:>             " match, to be used with %
-set mouse=a                     " automatically enable mouse usage
 set nobackup
 set noswapfile
 set nowb
 set nowrap                      " wrap long lines
 set nu                          " Line numbers on
+set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
 set shiftwidth=2                " an indentation every four columns
 set si
 set smartcase                   " case sensitive when uc present
@@ -97,7 +95,6 @@ cmap Tabe tabe
 :imap KJ <Esc>
 :imap <C-BS> <C-W>
 
-"nnoremap tm  :tabm<Space>
 nnoremap <leader>x @q
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
@@ -136,4 +133,3 @@ au BufNewFile,BufRead *.md     set filetype=markdown
 
 " apply 4 space indents to certain filetypes
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
-
