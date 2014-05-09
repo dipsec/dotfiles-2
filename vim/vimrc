@@ -1,57 +1,10 @@
 " stuff to improve
-" - autocomplete
-" - vimrc formatting
 " - skybison?
 " - command-t
 " - pasting from the system clipboard
 
-" ----- Vundle Bootstrap -----
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
-" ----- Vundle Bundles -----
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'Lokaltog/powerline-fonts'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'gmarik/vundle'
-Bundle 'godlygeek/tabular'
-Bundle 'groenewege/vim-less'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tomasr/molokai'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/nginx.vim'
-
-filetype plugin indent on
-
-" ----- GUI/Powerline configs -----
-set guifont=Inconsolata\ for\ Powerline\ 10
-set laststatus=2
-set guioptions=-M
-set guioptions=-T
-set guioptions=-r
-:colorscheme molokai
-let g:molokai_original = 1
-highlight ColorColumn ctermbg=4 " change the highlight to darkblue
-highlight CursorLine ctermbg=0  " change the highlight to darkblue
-scriptencoding utf-8
-syntax on
-
-" open the tag list browser on the right
-let mapleader = ","
-let Tlist_Use_Right_Window = 1
-
-" ----- General -----
-"set mouse=a                     " automatically enable mouse usage
-"set scrolljump=5                " lines to scroll when cursor leaves screen
-"set scrolloff=3                 " minimum lines to keep above and below cursor
-"set showmatch                   " show matching brackets/parenthesis
-"set spell                       " spell checking on
+" ----- vars -----
 set autochdir
 set autoindent                  " indent at the same level of the previous line
 set backspace=indent,eol,start  " backspace for dummies
@@ -67,13 +20,14 @@ set ignorecase                  " case insensitive search
 set incsearch                   " find as you type search
 set linespace=0                 " No extra spaces between rows
 set matchpairs+=<:>             " match, to be used with %
-set nobackup
+set mouse=a                     " automatically enable mouse usage
+set nocompatible
 set noswapfile
-set nowb
 set nowrap                      " wrap long lines
 set nu                          " Line numbers on
 set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
-set shiftwidth=2                " an indentation every four columns
+set rtp+=~/.vim/bundle/vundle/
+set shiftwidth=2                " an indentation every two columns
 set si
 set smartcase                   " case sensitive when uc present
 set smarttab
@@ -86,9 +40,36 @@ set wildmenu                    " show list instead of just completing
 set wildmode=list:longest,full  " command <Tab> completion, list matches, then longest common part, then all.
 set winminheight=0              " windows can be 0 line high
 
-" ----- Remaps -----
-cmap Tabe tabe
+filetype plugin indent on
+syntax on
+scriptencoding utf-8
 
+
+" ----- Vundle -----
+call vundle#rc()
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'gmarik/vundle'
+Bundle 'godlygeek/tabular'
+Bundle 'groenewege/vim-less'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tchyny/lightline.vim'
+Bundle 'tomasr/molokai'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/nginx.vim'
+
+
+" ---- Aesthetic -----
+highlight ColorColumn ctermbg = 4
+highlight CursorLine ctermbg  = 0
+let mapleader                 = ","
+:colorscheme molokai
+
+
+" ----- Remaps -----
 :imap jk <Esc>
 :imap JK <Esc>
 :imap kj <Esc>
@@ -105,24 +86,21 @@ nnoremap <silent> <leader>f :NERDTreeToggle<CR>
 nnoremap <silent> <leader>h :split<CR> 
 nnoremap <silent> <leader>q :q<CR> 
 nnoremap <silent> <leader>sc :e /tmp/scratch.txt<CR> 
-nnoremap <silent> <leader>t :TlistToggle<CR> 
 nnoremap <silent> <leader>v :vsplit<CR> 
 nnoremap <silent> <leader>w :w<CR> 
 nnoremap <silent> <space> :noh<CR> 
 nnoremap j gj
 nnoremap k gk
 nnoremap td :tabclose<CR>
-nnoremap tf :tabfirst<CR>
 nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
-nnoremap tl :tablast<CR>
-nnoremap tn :tabnext<CR>
 nnoremap tt :tabnew<CR>
 vnoremap < <gv
 vnoremap <silent> <leader>s :sort<CR> 
 vnoremap <silent> <leader>a :Tab /=<CR> 
 vnoremap <silent> <leader>o :Tab /:<CR> 
 vnoremap > >gv
+
 
 " ----- Filetype-specific -----
 " specify custom file types
@@ -133,3 +111,4 @@ au BufNewFile,BufRead *.md     set filetype=markdown
 
 " apply 4 space indents to certain filetypes
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
