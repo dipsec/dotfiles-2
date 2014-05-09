@@ -1,6 +1,4 @@
 " stuff to improve
-" - skybison?
-" - command-t
 " - pasting from the system clipboard
 
 
@@ -53,6 +51,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'paradigm/SkyBison'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
@@ -76,11 +75,12 @@ let mapleader                 = ","
 :imap KJ <Esc>
 :imap <C-BS> <C-W>
 
-nnoremap <leader>x @q
+nnoremap : :<c-u>call SkyBison("")<cr>
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
+nnoremap <leader>x @q
 nnoremap <silent> <leader>d :bd<CR> 
 nnoremap <silent> <leader>f :NERDTreeToggle<CR> 
 nnoremap <silent> <leader>h :split<CR> 
@@ -92,13 +92,13 @@ nnoremap <silent> <space> :noh<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap td :tabclose<CR>
-nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
+nnoremap tk :tabnext<CR>
 nnoremap tt :tabnew<CR>
 vnoremap < <gv
-vnoremap <silent> <leader>s :sort<CR> 
 vnoremap <silent> <leader>a :Tab /=<CR> 
 vnoremap <silent> <leader>o :Tab /:<CR> 
+vnoremap <silent> <leader>s :sort<CR> 
 vnoremap > >gv
 
 
