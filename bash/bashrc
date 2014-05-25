@@ -97,11 +97,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Appending to the system path
-#PATH=$PATH:/var/lib/gems/1.8/bin
-#PATH=$PATH:/home/chris/.cabal/bin
 export PATH
-
-# VIM 4 LYFE!!1
 export EDITOR=vim
-
