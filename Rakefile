@@ -1,5 +1,8 @@
 desc 'deploys all files'
 task :all do
+  #Rake::Task['vim:install'].execute
+  #Rake::Task['vim:vimrc'].execute
+  #Rake::Task['x'].execute
   Rake::Task['ack'].execute
   Rake::Task['awesome'].execute
   Rake::Task['bash'].execute
@@ -7,9 +10,7 @@ task :all do
   Rake::Task['feh'].execute
   Rake::Task['git'].execute
   Rake::Task['git_ripped'].execute
-  Rake::Task['vim:vimrc'].execute
-  Rake::Task['vim:install'].execute
-  Rake::Task['x'].execute
+  Rake::Task['terminator'].execute
 end
 
 desc 'deploys my ackrc'
@@ -77,6 +78,13 @@ task :slim do
   `sudo rm /etc/slim.conf`
   `sudo cp slim/slim.conf /etc/slim.conf`
   puts 'slim files deployed'
+end
+
+desc 'deploys my terminator files'
+task :terminator do
+  `rm -rf ~/.config/terminator`
+  `cp -r terminator ~/.config/`
+  puts 'terminator deployed'
 end
 
 namespace :vim do
