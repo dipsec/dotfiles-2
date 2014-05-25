@@ -10,6 +10,7 @@ task :all do
   Rake::Task['feh'].execute
   Rake::Task['git'].execute
   Rake::Task['git_ripped'].execute
+  Rake::Task['mutt'].execute
   Rake::Task['terminator'].execute
 end
 
@@ -65,6 +66,13 @@ task :git_ripped do
   `rm  ~/.git-ripped.json`
   `cp git-ripped/git-ripped.json ~/.git-ripped.json`
   puts 'git-ripped deployed'
+
+desc 'deploys my mutt files'
+task :mutt do
+  `rm -rf ~/.mutt`
+  `cp -r mutt ~/.mutt`
+  puts 'mutt deployed'
+end
 end
 
 desc 'remasters my crunchbang system'
