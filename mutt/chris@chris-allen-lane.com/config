@@ -10,7 +10,7 @@ set from       = chris@chris-allen-lane.com
 set smtp_url   = smtps://$imap_user:$imap_pass@smtp.gmail.com
 
 ## Etc ##
-set alias_file = "~/.mutt/calane83@gmail.com/alias"
+set alias_file = "~/.mutt/chris@chris-allen-lane.com/alias"
 set signature  = "~/.mutt/chris@chris-allen-lane.com/sig"
 source $alias_file
 

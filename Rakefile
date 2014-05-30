@@ -11,6 +11,7 @@ task :all do
   Rake::Task['git'].execute
   Rake::Task['git_ripped'].execute
   Rake::Task['mutt'].execute
+  Rake::Task['irssi'].execute
   Rake::Task['terminator'].execute
 end
 
@@ -66,6 +67,13 @@ task :git_ripped do
   `rm  ~/.git-ripped.json`
   `cp git-ripped/git-ripped.json ~/.git-ripped.json`
   puts 'git-ripped deployed'
+end
+
+desc 'deploys my irssi files'
+task :irssi do
+  `rm -rf ~/.irssi`
+  `cp -r irssi ~/.irssi`
+  puts 'irssi deployed'
 end
 
 desc 'deploys my mutt files'
