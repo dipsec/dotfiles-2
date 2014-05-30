@@ -66,13 +66,13 @@ task :git_ripped do
   `rm  ~/.git-ripped.json`
   `cp git-ripped/git-ripped.json ~/.git-ripped.json`
   puts 'git-ripped deployed'
+end
 
 desc 'deploys my mutt files'
 task :mutt do
   `rm -rf ~/.mutt`
   `cp -r mutt ~/.mutt`
   puts 'mutt deployed'
-end
 end
 
 desc 'remasters my crunchbang system'
