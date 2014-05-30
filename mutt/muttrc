@@ -10,7 +10,6 @@ set imap_keepalive        = 300
 set mail_check            = 60
 set mailcap_path          = ~/.mutt/mailcap
 set message_cachedir      = "~/.cache/mutt/messages"
-set pager_index_lines     = 20
 set postponed             = +Drafts
 set realname              = 'Chris Allen Lane'
 set record                = +Sent
@@ -21,7 +20,10 @@ set sort_alias            = alias
 set spoolfile             = +INBOX
 set ssl_force_tls         = yes
 set use_from              = yes
+# set pager_index_lines   = 20
+
 unset imap_passive
+unset sig_dashes
 
 ## Colors ##
 source "~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc"
