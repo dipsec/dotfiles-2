@@ -32,6 +32,12 @@ unset imap_passive
 unset prompt_after
 unset sig_dashes
 
+## binds ##
+bind pager <up> previous-line
+bind pager <down> next-line
+bind pager k previous-line
+bind pager j next-line
+
 ## Colors ##
 source "~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc"
 
@@ -44,7 +50,6 @@ macro index,pager <f2> '<enter-command>source ~/.mutt/calane83@gmail.com/config<
 macro index,pager <f3> '<enter-command>source ~/.mutt/chris@chris-allen-lane.com/config<enter><change-folder>!<enter>'
 
 # @todo:
-# - better pager controls
 # - folder configuration
 # - sidebar?
 # - local Mailbox
