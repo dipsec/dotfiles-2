@@ -4,9 +4,11 @@
 ## General options ##
 alternative_order text/plain text/html
 auto_view text/html
+set fast_reply            = yes
 set header_cache          = "~/.cache/mutt/headers"
 set imap_check_subscribed
 set imap_keepalive        = 300
+set include               = yes
 set mail_check            = 60
 set mailcap_path          = ~/.mutt/mailcap
 set message_cachedir      = "~/.cache/mutt/messages"
