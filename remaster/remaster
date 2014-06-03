@@ -28,6 +28,7 @@ echo 'Installing system packages...'
 #apt-get --assume-yes install python-fontforge
 #apt-get --assume-yes install terminator
 apt-get --assume-yes install ack-grep
+apt-get --assume-yes install at
 apt-get --assume-yes install boinc-client boinc-manager
 apt-get --assume-yes install build-essential
 apt-get --assume-yes install chromium-browser
