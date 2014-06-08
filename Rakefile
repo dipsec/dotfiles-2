@@ -6,6 +6,7 @@ task :all do
   Rake::Task['ack'].execute
   Rake::Task['awesome'].execute
   Rake::Task['bash'].execute
+  Rake::Task['cheat'].execute
   Rake::Task['conky'].execute
   Rake::Task['feh'].execute
   Rake::Task['git'].execute
@@ -43,10 +44,17 @@ task :bin do
   puts 'bin files deployed'
 end
 
-desc 'deploys my conky files'
-task :conky do
-  puts 'this is a stub'
+desc 'deploys my cheat files'
+task :cheat do
+  `rm -rf ~/.cheat`
+  `cp -r cheat ~/.cheat`
+  puts 'cheat deployed'
 end
+
+#desc 'deploys my conky files'
+#task :conky do
+  #puts 'this is a stub'
+#end
 
 desc 'deploys my feh files'
 task :feh do
