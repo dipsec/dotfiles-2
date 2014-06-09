@@ -1,0 +1,34 @@
+## IMAP ##
+set folder      = imaps://clane@viaforensics.com@imap.gmail.com/
+set imap_pass   = $my_pass_vf
+set imap_user   = clane@viaforensics.com
+set postponed   = +[Gmail]/Drafts
+set spoolfile   = +INBOX
+
+## SMTP ##
+set from        = clane@viaforensics.com
+set smtp_url    = smtps://$imap_user:$imap_pass@smtp.gmail.com
+
+## Etc ##
+set alias_file  = "~/.mutt/clane@viaforensics.com/alias"
+unset signature
+source $alias_file
+
+## PGP ##
+unset pgp_decode_command
+unset pgp_verify_command
+unset pgp_decrypt_command
+unset pgp_sign_command
+unset pgp_clearsign_command
+unset pgp_encrypt_only_command
+unset pgp_encrypt_sign_command
+unset pgp_import_command
+unset pgp_export_command
+unset pgp_verify_key_command
+unset pgp_list_pubring_command
+unset pgp_list_secring_command
+unset pgp_autosign
+unset pgp_sign_as
+unset pgp_replyencrypt
+unset pgp_timeout
+unset pgp_good_sign
