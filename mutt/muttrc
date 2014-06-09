@@ -4,6 +4,7 @@
 ## General options ##
 alternative_order text/plain text/html
 auto_view text/html
+set delete               = yes
 set fast_reply            = yes
 set header_cache          = "~/.cache/mutt/headers"
 set imap_check_subscribed
@@ -11,6 +12,7 @@ set imap_keepalive        = 300
 set include               = yes
 set mail_check            = 60
 set mailcap_path          = ~/.mutt/mailcap
+set mark_old              = no
 set message_cachedir      = "~/.cache/mutt/messages"
 set pager_stop
 set postponed             = +Drafts
@@ -25,8 +27,6 @@ set sort_aux              = reverse-last-date-received
 set spoolfile             = +INBOX
 set ssl_force_tls         = yes
 set use_from              = yes
-
-# set pager_index_lines   = 20
 
 unset imap_passive
 unset prompt_after
@@ -53,3 +53,4 @@ macro index,pager <f3> '<enter-command>source ~/.mutt/chris@chris-allen-lane.com
 # - folder configuration
 # - sidebar?
 # - local Mailbox
+# "a" (instead of "g") for "Group" / "All"
