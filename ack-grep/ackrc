@@ -1,2 +1,5 @@
 --type-set
-coffee=.coffee
+ejs=.ejs
+
+--type-set
+hogan=.hogan
