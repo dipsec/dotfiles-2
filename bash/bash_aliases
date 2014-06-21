@@ -36,3 +36,5 @@ alias vp='cd ~/src/www/vf/viaprotect-web'
 alias ws='python -m SimpleHTTPServer'
 alias www='cd ~/src/www'
 alias z='cd'
+
+alias vim-write='vim -u ~/src/etc/dotfiles/vim/vimrc-writing'

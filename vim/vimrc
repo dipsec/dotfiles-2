@@ -30,7 +30,7 @@ set si
 set smartcase                   " case sensitive when uc present
 set smarttab
 set softtabstop=2               " let backspace delete indent
-#set t_Co=256
+set t_Co=256
 set tabstop=2                   " an indentation every four columns
 set virtualedit=onemore         " allow for cursor beyond last character
 set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to

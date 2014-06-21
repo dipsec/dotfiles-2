@@ -1,8 +1,8 @@
 " ----- vars -----
 set autochdir
 set backspace=indent,eol,start  " backspace for dummies
-#set colorcolumn=80,120          " highlight the 80th column
-#set cursorline                  " highlight current line
+"set colorcolumn=80,120          " highlight the 80th column
+"set cursorline                  " highlight current line
 set expandtab                   " tabs are spaces, not tabs
 set hidden
 set hlsearch                    " highlight search terms
@@ -39,12 +39,16 @@ call vundle#rc()
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
+Bundle 'altercation/vim-colors-solarized.git'
 
 
 " ---- Aesthetic -----
 highlight ColorColumn ctermbg = 4
 highlight CursorLine ctermbg  = 0
 let mapleader                 = ","
+
+set bg=dark
+:colorscheme solarized
 
 
 " ----- Remaps -----
