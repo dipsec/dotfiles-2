@@ -1,23 +1,14 @@
-" stuff to improve
-" - pasting from the system clipboard
-
-
 " ----- vars -----
 set autochdir
-set autoindent                  " indent at the same level of the previous line
 set backspace=indent,eol,start  " backspace for dummies
-set colorcolumn=80,120          " highlight the 80th column
-set cursorline                  " highlight current line
+#set colorcolumn=80,120          " highlight the 80th column
+#set cursorline                  " highlight current line
 set expandtab                   " tabs are spaces, not tabs
-set foldenable                  " auto fold code
-set foldmethod=indent
-set foldnestmax=4
 set hidden
 set hlsearch                    " highlight search terms
 set ignorecase                  " case insensitive search
 set incsearch                   " find as you type search
 set linespace=0                 " No extra spaces between rows
-set matchpairs+=<:>             " match, to be used with %
 set mouse=a                     " automatically enable mouse usage
 set nocompatible
 set noswapfile
@@ -30,7 +21,7 @@ set si
 set smartcase                   " case sensitive when uc present
 set smarttab
 set softtabstop=2               " let backspace delete indent
-#set t_Co=256
+set t_Co=256
 set tabstop=2                   " an indentation every four columns
 set virtualedit=onemore         " allow for cursor beyond last character
 set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to
@@ -47,27 +38,13 @@ scriptencoding utf-8
 call vundle#rc()
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'gmarik/vundle'
-Bundle 'godlygeek/tabular'
-Bundle 'groenewege/vim-less'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'kchmck/vim-coffee-script'
-"Bundle 'paradigm/SkyBison'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
-Bundle 'tchyny/lightline.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/nginx.vim'
-Bundle 'altercation/vim-colors-solarized.git'
 
 
 " ---- Aesthetic -----
 highlight ColorColumn ctermbg = 4
 highlight CursorLine ctermbg  = 0
 let mapleader                 = ","
-
-set bg=dark
-:colorscheme solarized
 
 
 " ----- Remaps -----
@@ -76,9 +53,6 @@ set bg=dark
 :imap kj <Esc>
 :imap KJ <Esc>
 :imap <C-BS> <C-W>
-
-"nnoremap : :<c-u>call SkyBison("")<cr>
-"nnoremap <leader>b :<c-u>call SkyBison("")<cr>
 
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
@@ -108,11 +82,4 @@ vnoremap > >gv
 
 " ----- Filetype-specific -----
 " specify custom file types
-au BufNewFile,BufRead *.ejs    set filetype=html
-au BufNewFile,BufRead *.hogan  set filetype=html
-au BufNewFile,BufRead *.json   set filetype=javascript
 au BufNewFile,BufRead *.md     set filetype=markdown
-
-" apply 4 space indents to certain filetypes
-autocmd FileType php setlocal shiftwidth=4 tabstop=4
-autocmd FileType python setlocal shiftwidth=4 tabstop=4
