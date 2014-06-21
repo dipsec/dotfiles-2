@@ -8,6 +8,7 @@ set hidden
 set hlsearch                    " highlight search terms
 set ignorecase                  " case insensitive search
 set incsearch                   " find as you type search
+set linebreak
 set linespace=0                 " No extra spaces between rows
 set mouse=a                     " automatically enable mouse usage
 set nocompatible
@@ -28,6 +29,7 @@ set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to
 set wildmenu                    " show list instead of just completing
 set wildmode=list:longest,full  " command <Tab> completion, list matches, then longest common part, then all.
 set winminheight=0              " windows can be 0 line high
+set wrap
 
 filetype plugin indent on
 syntax on
