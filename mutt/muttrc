@@ -4,7 +4,8 @@
 ## General options ##
 alternative_order text/plain text/html
 auto_view text/html
-set delete               = yes
+set delete                = yes
+set editor                = "vim -u /home/chris/src/etc/dotfiles/vim/vimrc-writing"
 set fast_reply            = yes
 set header_cache          = "~/.cache/mutt/headers"
 set imap_check_subscribed
