@@ -3,3 +3,9 @@ ejs=.ejs
 
 --type-set
 hogan=.hogan
+
+--type-set
+markdown=.md
+
+--type-set
+markdown=.markdown
