@@ -73,10 +73,10 @@ tags  = {}
 -- Presuming that three monitors are detected (which is expected), give
 -- different tags to each
 if screen.count() == 4 then
-    tags[1] = awful.tag({ '1.gen  ', '2.www  ', '3.www  ', '4.com  ', '5.vol' }, 1, layouts[1])
-    tags[2] = awful.tag({ '1.gen  ', '2.www  ', '3.www  ', '4.fun',           }, 2, layouts[1])
-    tags[3] = awful.tag({ '1.gen  ', '2.dev  ', '3.www  ', '4.etc',           }, 3, layouts[1])
-    tags[4] = awful.tag({ '1.gen  ', '2.com  ', '3.www  ', '4.med',           }, 4, layouts[1])
+    tags[1] = awful.tag({ '1.trm  ' , '2.trm  ' , '3.trm  ' , '4.www  ' , '5.etc' , }, 1 , layouts[1])
+    tags[2] = awful.tag({ '1.www  ' , '2.www  ' , '3.www  ' , '4.www  ' , '5.soc' , }, 2 , layouts[1])
+    tags[3] = awful.tag({ '1.wrt  ' , '2.dev  ' , '3.dev  ' , '4.dev  ' , '5.etc' , }, 3 , layouts[1])
+    tags[4] = awful.tag({ '1.com  ' , '2.med  ' , '3.btc  ' , '4.etc  ' , '5.vol' , }, 4 , layouts[1])
 
 -- if a number of monitors other than three are detected, apply a generic default
 else
@@ -362,17 +362,13 @@ awful.rules.rules = {
         rule       = { class    = 'gimp' } ,
         properties = { floating = true   }
     },
-    --{
-        --rule       = { class = 'Thunderbird' } ,
-        --properties = { tag   = tags[1][4]    }
-    --},
     {
         rule       = { class    = 'Dialog' } ,
         properties = { floating = true     }
     },
     {
         rule       = { class = 'Pavucontrol' } ,
-        properties = {tag    = tags[1][5]    }
+        properties = {tag    = tags[4][6]    }
     },
 }
 -- }}}

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# @kludge: make it possible to restart awesome without running this script twice
+# prevent this script from running twice
 if [ -f '/tmp/.awesomestart' ]; then
   echo "Awesome has already been started. Aborting."
   exit 1
@@ -38,12 +38,6 @@ xfce4-power-manager &
 ## Mixer
 pavucontrol &
 
-## Detect and configure touchpad. See 'man synclient' for more info.
-#if egrep -iq 'touchpad' /proc/bus/input/devices; then
-    #synclient VertEdgeScroll=1 &
-    #synclient TapButton1=1 &
-#fi
-
 ## Start xscreensaver
 xscreensaver -no-splash &
 
@@ -56,8 +50,11 @@ xset r rate 250 30 &
 ## Turn on/off system beep
 xset b off &
 
-## Run the conky
+## Run conky
 #conky -q &
 
 ## Synapse
 synapse --startup
+
+## TrueCrypt
+truecrypt &
