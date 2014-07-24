@@ -25,8 +25,8 @@ apt-get --assume-yes remove xmag
 echo 'Installing system packages...'
 #apt-get --assume-yes install arandr
 #apt-get --assume-yes install fontforge
+#apt-get --assume-yes install inkscape
 #apt-get --assume-yes install python-fontforge
-#apt-get --assume-yes install terminator
 apt-get --assume-yes install ack-grep
 apt-get --assume-yes install at
 apt-get --assume-yes install boinc-client boinc-manager
@@ -34,7 +34,6 @@ apt-get --assume-yes install build-essential
 apt-get --assume-yes install chromium-browser
 apt-get --assume-yes install curl
 apt-get --assume-yes install imagemagick
-apt-get --assume-yes install inkscape
 apt-get --assume-yes install irrsi
 apt-get --assume-yes install libnss3-tools
 apt-get --assume-yes install mutt
@@ -44,12 +43,13 @@ apt-get --assume-yes install pcmanfm
 apt-get --assume-yes install pinta
 apt-get --assume-yes install rake
 apt-get --assume-yes install ruby
+apt-get --assume-yes install terminator
 apt-get --assume-yes install tidy
 apt-get --assume-yes install tmux
 apt-get --assume-yes install tree
 apt-get --assume-yes install unp
 apt-get --assume-yes install urlview
-apt-get --assume-yes install vim-nox
+apt-get --assume-yes install vim-gtk
 apt-get --assume-yes install vlc vlc-plugin-pulse
 apt-get --assume-yes install w3m
 apt-get --assume-yes install xclip
@@ -62,17 +62,17 @@ apt-get autoclean
 apt-get autoremove --purge
 
 echo 'Creating directories...'
-cd ~; mkdir desktop src; cd src; mkdir bin conf www
+cd ~; mkdir desktop src; cd src; mkdir bin etc www
 
 echo 'Removing default directories...'
 rm -rf ~/backup ~/templates
 
 # install vim
-echo 'Installing vim...'
-mkdir -p ~/.vim/bundle/
-cd ~/.vim/bundle/
-git clone https://github.com/gmarik/vundle
-chown -R $USER:$USER ~/.vim
+#echo 'Installing vim...'
+#mkdir -p ~/.vim/bundle/
+#cd ~/.vim/bundle/
+#git clone https://github.com/gmarik/vundle
+#chown -R $USER:$USER ~/.vim
 
 # generate SSH keys
 echo 'Generating SSH keys...'
@@ -82,12 +82,9 @@ ssh-keygen -t rsa -C "chris@chris-allen-lane.com"
 echo 'Packages installed.  Remember to install the following as well:'
 echo ''
 echo ' * Google Chrome'
-echo ' * LastPass'
 echo ' * TrueCrypt'
 echo ' * Vagrant'
 echo ' * VirtualBox'
-echo ''
-echo 'Remember to sync your browser plugins as well.'
 
 # Browser sync
 chromium-browser https://lastpass.com
