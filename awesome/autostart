@@ -53,8 +53,8 @@ xset b off &
 ## Run conky
 #conky -q &
 
-## Synapse
-synapse --startup
-
 ## TrueCrypt
 truecrypt &
+
+## Synapse
+synapse --startup
