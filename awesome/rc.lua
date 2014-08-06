@@ -366,10 +366,10 @@ awful.rules.rules = {
         rule       = { class    = 'Dialog' } ,
         properties = { floating = true     }
     },
-    {
-        rule       = { class = 'Pavucontrol' } ,
-        properties = { tag   = tags[4][4]    }
-    },
+    --{
+        --rule       = { class = 'Pavucontrol' } ,
+        --properties = { tag   = tags[4][4]    }
+    --},
 }
 -- }}}
 
