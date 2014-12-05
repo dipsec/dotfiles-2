@@ -1,16 +1,16 @@
 ## IMAP ##
-set folder      = imaps://clane@viaforensics.com@imap.gmail.com/
-set imap_pass   = $my_pass_vf
-set imap_user   = clane@viaforensics.com
+set folder      = imaps://clane@nowsecure.com@imap.gmail.com/
+set imap_pass   = $my_pass_nowsecure
+set imap_user   = clane@nowsecure.com
 set postponed   = +[Gmail]/Drafts
 set spoolfile   = +INBOX
 
 ## SMTP ##
-set from        = clane@viaforensics.com
+set from        = clane@nowsecure.com
 set smtp_url    = smtps://$imap_user:$imap_pass@smtp.gmail.com
 
 ## Etc ##
-set alias_file  = "~/.mutt/clane@viaforensics.com/alias"
+set alias_file  = "~/.mutt/clane@nowsecure.com/alias"
 unset signature
 source $alias_file
 
