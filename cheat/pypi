@@ -1,0 +1,5 @@
+# To upload a project to pypi
+python setup.py sdist upload
+
+For configuration information, see:
+https://docs.python.org/3.1/distutils/packageindex.html#pypirc
