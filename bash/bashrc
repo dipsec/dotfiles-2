@@ -99,3 +99,4 @@ fi
 
 export PATH
 export EDITOR=vim
+export DEFAULT_CHEAT_DIR='/home/chris/src/dotfiles/cheat'
