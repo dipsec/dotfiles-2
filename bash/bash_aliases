@@ -1,43 +1,54 @@
-# the trailing semicolons allow you to "chain" these commands, as in:
-# .. ls
-alias ......="cd ../../../../..;"
-alias .....="cd ../../../..;"
-alias ....="cd ../../..;"
-alias ...="cd ../..;"
-alias ..="cd ..;"
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias calcom='ssh chris-allen-lane.com'
+# misc system
 alias cb='xclip -selection clipboard'
 alias clip='xclip -selection clipboard'
-alias d='cd ~/desktop'
-alias ga='git add --all'
-alias gaa='git add --all'
-alias gac='git add --all; git commit'
-alias gas='git add --all; git status'
-alias gb='git branch'
-alias gc='git commit'
-alias gs='git status'
 alias l='ls -CF'
 alias la='ls -A'
 alias less='less -r'
 alias ll='ls -alF'
 alias off='sudo shutdown -P now'
 alias q='exit'
-alias src='cd ~/src/'
-alias todo='vim ~/documents/todo'
-alias up='sudo apt-get update && sudo apt-get upgrade --assume-yes && sudo apt-get autoclean && sudo apt-get autoremove'
+alias z='cd'
+# Add an "alert" alias for long running commands.  Use like: `sleep 10; alert`
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# shotcuts
+alias ......="cd ../../../../..;"
+alias .....="cd ../../../..;"
+alias ....="cd ../../..;"
+alias ...="cd ../..;"
+alias ..="cd ..;"
+alias d='cd ~/desktop'
 alias ns='cd ~/src/nowsecure'
-alias vh='vagrant halt'
+alias src='cd ~/src/'
+alias vp='cd ~/src/nowsecure/viaprotect-vagrant'
+alias www='cd ~/src/www'
+
+# ssh
+alias calcom='ssh chris-allen-lane.com'
+
+# git
+alias gaa='git add --all'
+alias gac='git add --all; git commit'
+alias gas='git add --all; git status'
+alias gb = 'git branch'
+alias gd = 'git diff'
+alias gc = 'git commit'
+alias gs = 'git status'
+
+# vpn
 alias viacloud='sudo openvpn --config /home/chris/.ssh/via-cloud.ovpn --auth-retry interact --reneg-sec 0'
 alias viaisol8='sudo openvpn --config /home/chris/.ssh/via-isol8.ovpn --auth-retry interact --reneg-sec 0'
 alias viaisolate='sudo openvpn --config /home/chris/.ssh/via-isol8.ovpn --auth-retry interact --reneg-sec 0'
-alias vp='cd ~/src/www/vf/viaprotect-vagrant'
+
+# vagrant
+alias vh='vagrant halt'
 alias vs='vagrant ssh'
 alias vu='vagrant up'
-alias ws='python -m SimpleHTTPServer'
-alias www='cd ~/src/www'
-alias z='cd'
+
+# open in vim
+alias dots='vim /home/chris/src/etc/dotfiles/'
+alias todo='vim ~/documents/todo'
 alias vim-write='vim -u ~/src/etc/dotfiles/vim/vimrc-writing'
+
+# ad-hoc webserver
+alias ws='python -m SimpleHTTPServer'
