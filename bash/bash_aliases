@@ -46,7 +46,7 @@ alias vs='vagrant ssh'
 alias vu='vagrant up'
 
 # open in vim
-alias dots='vim /home/chris/src/etc/dotfiles/'
+alias dots='vim ~/src/dotfiles'
 alias todo='vim ~/documents/todo'
 alias vim-write='vim -u ~/src/etc/dotfiles/vim/vimrc-writing'
 
