@@ -51,7 +51,6 @@ Bundle 'godlygeek/tabular'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
-"Bundle 'paradigm/SkyBison'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
@@ -59,12 +58,13 @@ Bundle 'tchyny/lightline.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/nginx.vim'
 Bundle 'altercation/vim-colors-solarized.git'
-
+Bundle 'tpope/vim-markdown.git'
 
 " ---- Aesthetic -----
-highlight ColorColumn ctermbg = 4
-highlight CursorLine ctermbg  = 0
-let mapleader                 = ","
+highlight ColorColumn ctermbg   = 4
+highlight CursorLine ctermbg    = 0
+let mapleader                   = ","
+let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
 
 set bg=dark
 :colorscheme solarized
