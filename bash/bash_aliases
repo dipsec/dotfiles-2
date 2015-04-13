@@ -36,9 +36,9 @@ alias gc='git commit'
 alias gs='git status'
 
 # vpn
-alias viacloud='sudo openvpn --config /home/chris/.ssh/via-cloud.ovpn --auth-retry interact --reneg-sec 0'
-alias viaisol8='sudo openvpn --config /home/chris/.ssh/via-isol8.ovpn --auth-retry interact --reneg-sec 0'
-alias viaisolate='sudo openvpn --config /home/chris/.ssh/via-isol8.ovpn --auth-retry interact --reneg-sec 0'
+alias viacloud='sudo openvpn --config /home/chris/etc/vpn/via-cloud.ovpn --auth-retry interact --reneg-sec 0'
+alias viaisol8='sudo openvpn --config /home/chris/etc/vpn/via-isol8.ovpn --auth-retry interact --reneg-sec 0'
+alias viaisolate='sudo openvpn --config /home/chris/etc/vpn/via-isol8.ovpn --auth-retry interact --reneg-sec 0'
 
 # vagrant
 alias vh='vagrant halt'
@@ -46,7 +46,8 @@ alias vs='vagrant ssh'
 alias vu='vagrant up'
 
 # open in vim
-alias dots='vim ~/src/dotfiles'
+alias dots='cd ~/src/dotfiles'
+alias dotse='vim ~/src/dotfiles'
 alias todo='vim ~/documents/todo'
 alias vim-write='vim -u ~/src/etc/dotfiles/vim/vimrc-writing'
 
