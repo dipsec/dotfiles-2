@@ -112,6 +112,7 @@ au BufNewFile,BufRead *.ejs    set filetype=html
 au BufNewFile,BufRead *.hogan  set filetype=html
 au BufNewFile,BufRead *.json   set filetype=javascript
 au BufNewFile,BufRead *.md     set filetype=markdown
+au BufNewFile,BufRead *.node   set filetype=javascript
 
 " apply 4 space indents to certain filetypes
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
