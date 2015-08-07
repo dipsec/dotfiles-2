@@ -1,0 +1,6 @@
+notify-send "System update" "The system is now being updated..."
+apt-get update
+apt-get upgrade --assume-yes 
+apt-get autoclean
+apt-get autoremove
+notify-send "System update" "Update complete."
